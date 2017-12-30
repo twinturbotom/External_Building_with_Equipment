@@ -1,0 +1,1 @@
+# External_Building_with_Equipment
