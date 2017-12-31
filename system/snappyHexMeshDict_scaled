@@ -18,7 +18,7 @@ FoamFile
 
 castellatedMesh on;
 snap            on;
-addLayers       off;
+addLayers       on;
 
 geometry
 {
@@ -183,7 +183,7 @@ addLayersControls
 {
     layers
     {
-        "building|generator|condenser"
+        "building|generator|condenser|ground"
         {
             nSurfaceLayers 3;
         }
