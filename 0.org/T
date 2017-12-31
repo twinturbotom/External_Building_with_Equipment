@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+Tinlet      uniform 308.15;
+Tcondenser  uniform 324.817;
+Tgenerator  uniform 366.483;
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 300;
+
+boundaryField
+{
+    "(inlet)"
+    {
+        type            fixedValue;
+        value           uniform 300.0;
+    }
+
+    "(building|condenser|outlet|ground|generator)"
+    {
+        type            zeroGradient;
+    }
+
+    "(condenser_.*)"
+    {
+        type            fixedValue;
+        value           $Tcondenser;
+    }
+    "(generator_.*)"
+    {
+        type            fixedValue;
+        value           $Tgenerator;
+    }
+    symmetry
+    {
+        type            symmetry;
+    }
+}
+
+// ************************************************************************* //

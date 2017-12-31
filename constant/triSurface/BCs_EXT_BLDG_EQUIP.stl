@@ -1,0 +1,64 @@
+solid "generator_in"
+   facet normal -1.03620815631682E-15 -3.36693183977253E-15 -1
+      outer loop
+         vertex 8500.00000000001 -10500.0000000003 999.999999999976
+         vertex 11500 -10500.0000000003 999.999999999973
+         vertex 8500.00000000001 -12940.0999999995 999.999999999984
+      endloop
+   endfacet
+   facet normal -1.33226762955019E-15 -3.00293920844577E-15 -1
+      outer loop
+         vertex 8500.00000000001 -12940.0999999995 999.999999999984
+         vertex 11500 -10500.0000000003 999.999999999973
+         vertex 11500 -12940.0999999995 999.99999999998
+      endloop
+   endfacet
+endsolid
+solid "generator_out"
+   facet normal -9.47390314346981E-15 -3.55944748000289E-15 1
+      outer loop
+         vertex 8500.00000000001 -21782.1412696868 5000.00000000003
+         vertex 8500.00000000001 -24526.9387899731 5000.00000000002
+         vertex 11500 -21782.1412696883 5000.00000000006
+      endloop
+   endfacet
+   facet normal -1.24344978758018E-14 -3.23586134545896E-16 1
+      outer loop
+         vertex 11500 -21782.1412696883 5000.00000000006
+         vertex 8500.00000000001 -24526.9387899731 5000.00000000002
+         vertex 11500 -24526.9387899731 5000.00000000006
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 21999.9999999997 12500
+         vertex 10695.071 27999.9999999997 12500
+         vertex 9195.07099999999 21999.9999999997 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 21999.9999999997 12500
+         vertex 10695.071 27999.9999999997 12500
+         vertex 9195.07099999996 27999.9999999996 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 21999.9999999997 11000
+         vertex 10695.071 27999.9999999997 11000
+         vertex 9195.07099999999 21999.9999999997 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 21999.9999999997 11000
+         vertex 10695.071 27999.9999999997 11000
+         vertex 9195.07099999996 27999.9999999996 11000
+      endloop
+   endfacet
+endsolid
