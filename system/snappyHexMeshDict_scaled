@@ -183,9 +183,9 @@ addLayersControls
 {
     layers
     {
-        "building|generator|condenser|ground"
+        "(building|generator|condenser|ground|wall)"
         {
-            nSurfaceLayers 3;
+            nSurfaceLayers 4;
         }
     }
 

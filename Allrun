@@ -11,7 +11,7 @@ runApplication surfaceFeatureExtract
 runApplication blockMesh
 
 runApplication decomposePar #-allRegions
-mpiexec -n 4 snappyHexMesh -parallel
+mpiexec -n 4 snappyHexMesh -parallel -dict system/snappyHexMeshDict_scaled
 
 reconstructParMesh -latestTime -mergeTol 1E-06
 
