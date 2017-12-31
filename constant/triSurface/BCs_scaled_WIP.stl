@@ -1,0 +1,512 @@
+solid "generator_out"
+   facet normal -9.47390314346964E-15 -3.23586134545717E-15 1
+      outer loop
+         vertex 12500 -21782.1412696868 5000.00000000002
+         vertex 12500 -24526.9387899731 5000.00000000001
+         vertex 15500 -21782.1412696883 5000.00000000005
+      endloop
+   endfacet
+   facet normal -1.24344978758018E-14 0 1
+      outer loop
+         vertex 15500 -21782.1412696883 5000.00000000005
+         vertex 12500 -24526.9387899731 5000.00000000001
+         vertex 15500 -24526.9387899731 5000.00000000005
+      endloop
+   endfacet
+endsolid
+solid "generator_in"
+   facet normal -1.03620815631682E-15 -3.36693183977253E-15 -1
+      outer loop
+         vertex 8500.00000000001 -10500.0000000003 999.999999999976
+         vertex 11500 -10500.0000000003 999.999999999973
+         vertex 8500.00000000001 -12940.0999999995 999.999999999984
+      endloop
+   endfacet
+   facet normal -1.33226762955019E-15 -3.00293920844577E-15 -1
+      outer loop
+         vertex 8500.00000000001 -12940.0999999995 999.999999999984
+         vertex 11500 -10500.0000000003 999.999999999973
+         vertex 11500 -12940.0999999995 999.99999999998
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 20695.071 12000 11000
+         vertex 20695.071 18000 11000
+         vertex 19195.071 12000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 19195.071 12000 11000
+         vertex 20695.071 18000 11000
+         vertex 19195.071 18000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 15695.071 22000 11000
+         vertex 15695.071 28000 11000
+         vertex 14195.071 22000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 14195.071 22000 11000
+         vertex 15695.071 28000 11000
+         vertex 14195.071 28000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 25695.071 22000 12500
+         vertex 25695.071 28000 12500
+         vertex 24195.071 22000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 24195.071 22000 12500
+         vertex 25695.071 28000 12500
+         vertex 24195.071 28000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 15695.071 32000 11000
+         vertex 15695.071 38000 11000
+         vertex 14195.071 32000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 14195.071 32000 11000
+         vertex 15695.071 38000 11000
+         vertex 14195.071 38000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 12000 12500
+         vertex 10695.071 18000 12500
+         vertex 9195.07099999999 12000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 12000 12500
+         vertex 10695.071 18000 12500
+         vertex 9195.07099999996 18000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 12000 11000
+         vertex 10695.071 18000 11000
+         vertex 9195.07099999999 12000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 12000 11000
+         vertex 10695.071 18000 11000
+         vertex 9195.07099999996 18000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 25695.071 12000 12500
+         vertex 25695.071 18000 12500
+         vertex 24195.071 12000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 24195.071 12000 12500
+         vertex 25695.071 18000 12500
+         vertex 24195.071 18000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 32000 11000
+         vertex 10695.071 38000 11000
+         vertex 9195.07099999999 32000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 32000 11000
+         vertex 10695.071 38000 11000
+         vertex 9195.07099999996 38000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 15695.071 22000 12500
+         vertex 15695.071 28000 12500
+         vertex 14195.071 22000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 14195.071 22000 12500
+         vertex 15695.071 28000 12500
+         vertex 14195.071 28000 12500
+      endloop
+   endfacet
+endsolid
+solid "generator_out"
+   facet normal -9.47390314346981E-15 -3.55944748000289E-15 1
+      outer loop
+         vertex 8500.00000000001 -21782.1412696868 5000.00000000003
+         vertex 8500.00000000001 -24526.9387899731 5000.00000000002
+         vertex 11500 -21782.1412696883 5000.00000000006
+      endloop
+   endfacet
+   facet normal -1.24344978758018E-14 -3.23586134545896E-16 1
+      outer loop
+         vertex 11500 -21782.1412696883 5000.00000000006
+         vertex 8500.00000000001 -24526.9387899731 5000.00000000002
+         vertex 11500 -24526.9387899731 5000.00000000006
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 20695.071 32000 11000
+         vertex 20695.071 38000 11000
+         vertex 19195.071 32000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 19195.071 32000 11000
+         vertex 20695.071 38000 11000
+         vertex 19195.071 38000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 32000 12500
+         vertex 10695.071 38000 12500
+         vertex 9195.07099999999 32000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 32000 12500
+         vertex 10695.071 38000 12500
+         vertex 9195.07099999996 38000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 22000 12500
+         vertex 10695.071 28000 12500
+         vertex 9195.07099999999 22000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 22000 12500
+         vertex 10695.071 28000 12500
+         vertex 9195.07099999996 28000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 20695.071 22000 12500
+         vertex 20695.071 28000 12500
+         vertex 19195.071 22000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 19195.071 22000 12500
+         vertex 20695.071 28000 12500
+         vertex 19195.071 28000 12500
+      endloop
+   endfacet
+endsolid
+solid "generator_out"
+   facet normal -9.47390314346981E-15 -3.55944748000289E-15 1
+      outer loop
+         vertex 18500 -21782.1412696868 5000.00000000003
+         vertex 18500 -24526.9387899731 5000.00000000002
+         vertex 21500 -21782.1412696883 5000.00000000006
+      endloop
+   endfacet
+   facet normal -1.24344978758018E-14 -3.23586134545896E-16 1
+      outer loop
+         vertex 21500 -21782.1412696883 5000.00000000006
+         vertex 18500 -24526.9387899731 5000.00000000002
+         vertex 21500 -24526.9387899731 5000.00000000006
+      endloop
+   endfacet
+endsolid
+solid "generator_in"
+   facet normal -1.03620815631682E-15 -3.36693183977253E-15 -1
+      outer loop
+         vertex 22500 -10500.0000000003 999.999999999972
+         vertex 25500 -10500.0000000003 999.999999999969
+         vertex 22500 -12940.0999999995 999.99999999998
+      endloop
+   endfacet
+   facet normal -1.33226762955019E-15 -3.00293920844577E-15 -1
+      outer loop
+         vertex 22500 -12940.0999999995 999.99999999998
+         vertex 25500 -10500.0000000003 999.999999999969
+         vertex 25500 -12940.0999999995 999.999999999976
+      endloop
+   endfacet
+endsolid
+solid "generator_out"
+   facet normal -9.47390314346964E-15 -3.23586134545717E-15 1
+      outer loop
+         vertex 22500 -21782.1412696868 5000.00000000002
+         vertex 22500 -24526.9387899731 5000.00000000001
+         vertex 25500 -21782.1412696883 5000.00000000005
+      endloop
+   endfacet
+   facet normal -1.24344978758018E-14 0 1
+      outer loop
+         vertex 25500 -21782.1412696883 5000.00000000005
+         vertex 22500 -24526.9387899731 5000.00000000001
+         vertex 25500 -24526.9387899731 5000.00000000005
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 15695.071 32000 12500
+         vertex 15695.071 38000 12500
+         vertex 14195.071 32000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 14195.071 32000 12500
+         vertex 15695.071 38000 12500
+         vertex 14195.071 38000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 20695.071 22000 11000
+         vertex 20695.071 28000 11000
+         vertex 19195.071 22000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 19195.071 22000 11000
+         vertex 20695.071 28000 11000
+         vertex 19195.071 28000 11000
+      endloop
+   endfacet
+endsolid
+solid "generator_in"
+   facet normal -1.03620815631682E-15 -3.36693183977253E-15 -1
+      outer loop
+         vertex 18500 -10500.0000000003 999.999999999976
+         vertex 21500 -10500.0000000003 999.999999999973
+         vertex 18500 -12940.0999999995 999.999999999984
+      endloop
+   endfacet
+   facet normal -1.33226762955019E-15 -3.00293920844577E-15 -1
+      outer loop
+         vertex 18500 -12940.0999999995 999.999999999984
+         vertex 21500 -10500.0000000003 999.999999999973
+         vertex 21500 -12940.0999999995 999.99999999998
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 25695.071 12000 11000
+         vertex 25695.071 18000 11000
+         vertex 24195.071 12000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 24195.071 12000 11000
+         vertex 25695.071 18000 11000
+         vertex 24195.071 18000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 15695.071 12000 11000
+         vertex 15695.071 18000 11000
+         vertex 14195.071 12000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 14195.071 12000 11000
+         vertex 15695.071 18000 11000
+         vertex 14195.071 18000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 15695.071 12000 12500
+         vertex 15695.071 18000 12500
+         vertex 14195.071 12000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 14195.071 12000 12500
+         vertex 15695.071 18000 12500
+         vertex 14195.071 18000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 20695.071 32000 12500
+         vertex 20695.071 38000 12500
+         vertex 19195.071 32000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 19195.071 32000 12500
+         vertex 20695.071 38000 12500
+         vertex 19195.071 38000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 25695.071 32000 12500
+         vertex 25695.071 38000 12500
+         vertex 24195.071 32000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 24195.071 32000 12500
+         vertex 25695.071 38000 12500
+         vertex 24195.071 38000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 25695.071 32000 11000
+         vertex 25695.071 38000 11000
+         vertex 24195.071 32000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 24195.071 32000 11000
+         vertex 25695.071 38000 11000
+         vertex 24195.071 38000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 10695.071 22000 11000
+         vertex 10695.071 28000 11000
+         vertex 9195.07099999999 22000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 9195.07099999999 22000 11000
+         vertex 10695.071 28000 11000
+         vertex 9195.07099999996 28000 11000
+      endloop
+   endfacet
+endsolid
+solid "condenser_out"
+   facet normal 0 0 1
+      outer loop
+         vertex 20695.071 12000 12500
+         vertex 20695.071 18000 12500
+         vertex 19195.071 12000 12500
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 19195.071 12000 12500
+         vertex 20695.071 18000 12500
+         vertex 19195.071 18000 12500
+      endloop
+   endfacet
+endsolid
+solid "condenser_in"
+   facet normal 0 0 1
+      outer loop
+         vertex 25695.071 22000 11000
+         vertex 25695.071 28000 11000
+         vertex 24195.071 22000 11000
+      endloop
+   endfacet
+   facet normal 0 0 1
+      outer loop
+         vertex 24195.071 22000 11000
+         vertex 25695.071 28000 11000
+         vertex 24195.071 28000 11000
+      endloop
+   endfacet
+endsolid
+solid "generator_in"
+   facet normal -1.03620815631682E-15 -3.36693183977253E-15 -1
+      outer loop
+         vertex 12500 -10500.0000000003 999.999999999972
+         vertex 15500 -10500.0000000003 999.999999999969
+         vertex 12500 -12940.0999999995 999.99999999998
+      endloop
+   endfacet
+   facet normal -1.33226762955019E-15 -3.00293920844577E-15 -1
+      outer loop
+         vertex 12500 -12940.0999999995 999.99999999998
+         vertex 15500 -10500.0000000003 999.999999999969
+         vertex 15500 -12940.0999999995 999.999999999976
+      endloop
+   endfacet
+endsolid
