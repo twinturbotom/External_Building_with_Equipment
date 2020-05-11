@@ -17,8 +17,6 @@ FoamFile
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-numberOfSubdomains  4;
-
 //- Keep owner and neighbour on same processor for faces in zones:
 // preserveFaceZones (heater solid1 solid3);
 
@@ -26,37 +24,38 @@ method          scotch;
 // method          hierarchical;
 // method          simple;
 // method          manual;
+numberOfSubdomains 12;
+method scotch;
+// simpleCoeffs
+// {
+//     n           (2 2 1);
+//     delta       0.001;
+// }
 
-simpleCoeffs
-{
-    n           (2 2 1);
-    delta       0.001;
-}
+// hierarchicalCoeffs
+// {
+//     n           (2 2 1);
+//     delta       0.001;
+//     order       xyz;
+// }
 
-hierarchicalCoeffs
-{
-    n           (2 2 1);
-    delta       0.001;
-    order       xyz;
-}
+// scotchCoeffs
+// {
+//     //processorWeights
+//     //(
+//     //    1
+//     //    1
+//     //    1
+//     //    1
+//     //);
+//     //writeGraph  true;
+//     //strategy "b";
+// }
 
-scotchCoeffs
-{
-    //processorWeights
-    //(
-    //    1
-    //    1
-    //    1
-    //    1
-    //);
-    //writeGraph  true;
-    //strategy "b";
-}
-
-manualCoeffs
-{
-    dataFile    "decompositionData";
-}
+// manualCoeffs
+// {
+//     dataFile    "decompositionData";
+// }
 
 
 //// Is the case distributed

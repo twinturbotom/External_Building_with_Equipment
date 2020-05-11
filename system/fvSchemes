@@ -1,9 +1,9 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  3.0.x                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
@@ -16,37 +16,30 @@ FoamFile
 
 ddtSchemes
 {
-    default         steadyState;
+    default steadyState;
 }
 
 gradSchemes
 {
     default         Gauss linear;
-
-    limited         cellLimited Gauss linear 1;
-    grad(U)         $limited;
-    grad(k)         $limited;
-    grad(epsilon)     $limited;
 }
 
 divSchemes
 {
     default         none;
 
-    div(phi,U)      bounded Gauss linearUpwind limited;
-
-    turbulence      bounded Gauss limitedLinear 1;
-    div(phi,k)      $turbulence;
-    div(phi,epsilon) $turbulence;
-
-    div(phi,T)      bounded Gauss upwind;
-
-    div((nuEff*dev2(T(grad(U))))) Gauss linear;
+    div(phi,U)      bounded Gauss limitedLinear 0.2;
+    div(phi,K)      bounded Gauss limitedLinear 0.2;
+    div(phi,h)      bounded Gauss limitedLinear 0.2;
+    div(phi,k)      bounded Gauss limitedLinear 0.2;
+    div(phi,epsilon) bounded Gauss limitedLinear 0.2;
+    div(phi,omega) bounded Gauss limitedLinear 0.2;
+    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
 }
 
 laplacianSchemes
 {
-    default         Gauss linear corrected;
+    default         Gauss linear orthogonal;
 }
 
 interpolationSchemes
@@ -56,12 +49,13 @@ interpolationSchemes
 
 snGradSchemes
 {
-    default         corrected;
+    default         orthogonal;
 }
 
 wallDist
 {
     method meshWave;
 }
+
 
 // ************************************************************************* //
