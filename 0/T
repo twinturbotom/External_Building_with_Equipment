@@ -9,47 +9,46 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      controlDict;
+    class       volScalarField;
+    object      T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     buoyantBoussinesqSimpleFoam; //simpleFoam;
+Tinlet      uniform 308.15;
+Tcondenser  uniform 324.817;
+Tgenerator  uniform 366.483;
 
-startFrom       latestTime;
+dimensions      [0 0 0 1 0 0 0];
 
-startTime       0;
+internalField   uniform 300;
 
-stopAt          endTime;
-
-endTime         500;
-
-deltaT          1;
-
-writeControl    timeStep;
-
-writeInterval   50;
-
-purgeWrite      2;
-
-writeFormat     ascii;
-
-writePrecision  6;
-
-writeCompression off;
-
-timeFormat      general;
-
-timePrecision   6;
-
-runTimeModifiable true;
-
-// adjustTimeStep  yes;
-
-// maxCo           1;
-
-functions
+boundaryField
 {
+    "(inlet)"
+    {
+        type            fixedValue;
+        value           uniform 300.0;
+    }
+
+    "(building|condenser|outlet|ground|generator)"
+    {
+        type            zeroGradient;
+    }
+
+    "(condenser_.*)"
+    {
+        type            fixedValue;
+        value           $Tcondenser;
+    }
+    "(generator_.*)"
+    {
+        type            fixedValue;
+        value           $Tgenerator;
+    }
+    symmetry
+    {
+        type            symmetry;
+    }
 }
 
 // ************************************************************************* //

@@ -9,47 +9,39 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      controlDict;
+    class       volScalarField;
+    object      epsilon;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     buoyantBoussinesqSimpleFoam; //simpleFoam;
+epsilonInlet  0.03; // Cmu^0.75 * k^1.5 / L ; L =10
 
-startFrom       latestTime;
+dimensions      [0 2 -3 0 0 0 0];
 
-startTime       0;
+internalField   uniform $epsilonInlet;
 
-stopAt          endTime;
-
-endTime         500;
-
-deltaT          1;
-
-writeControl    timeStep;
-
-writeInterval   50;
-
-purgeWrite      2;
-
-writeFormat     ascii;
-
-writePrecision  6;
-
-writeCompression off;
-
-timeFormat      general;
-
-timePrecision   6;
-
-runTimeModifiable true;
-
-// adjustTimeStep  yes;
-
-// maxCo           1;
-
-functions
+boundaryField
 {
+    "(inlet|.*_in)"
+    {
+        type            fixedValue;
+        value           uniform $epsilonInlet;
+    }
+
+    "(outlet|.*_out)"
+    {
+        type            inletOutlet;
+        inletValue      uniform $epsilonInlet;
+        value           uniform $epsilonInlet;
+    }
+
+    "(building|generator|condenser|ground)"
+    {
+        type            epsilonWallFunction;
+        value           uniform $epsilonInlet;
+    }
+
+    #includeEtc "caseDicts/setConstraintTypes"
 }
 
 // ************************************************************************* //

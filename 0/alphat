@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  3.0.x                                 |
+|  \\    /   O peration     | Version:  5                                     |
 |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -9,47 +9,35 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      controlDict;
+    class       volScalarField;
+    location    "0";
+    object      alphat;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     buoyantBoussinesqSimpleFoam; //simpleFoam;
+dimensions      [0 2 -1 0 0 0 0];
 
-startFrom       latestTime;
+internalField   uniform 0;
 
-startTime       0;
-
-stopAt          endTime;
-
-endTime         500;
-
-deltaT          1;
-
-writeControl    timeStep;
-
-writeInterval   50;
-
-purgeWrite      2;
-
-writeFormat     ascii;
-
-writePrecision  6;
-
-writeCompression off;
-
-timeFormat      general;
-
-timePrecision   6;
-
-runTimeModifiable true;
-
-// adjustTimeStep  yes;
-
-// maxCo           1;
-
-functions
+boundaryField
 {
+    "(building|generator|condenser|ground)"
+    {
+        type            alphatJayatillekeWallFunction;
+        Prt             0.85;
+        value           uniform 0;
+    }
+    slips
+    {
+        type            symmetry;
+    }
+    "(inlet|outlet|generator_.*|condenser_.*)"
+    {
+        type calculated;
+        value uniform 0;
+    }
+
 }
+
 
 // ************************************************************************* //

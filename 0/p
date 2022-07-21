@@ -9,47 +9,36 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      controlDict;
+    class       volScalarField;
+    object      p;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     buoyantBoussinesqSimpleFoam; //simpleFoam;
+dimensions       [0 2 -2 0 0 0 0]; //[1 -1 -2 0 0 0 0]; //from wind around bldgs: [0 2 -2 0 0 0 0];
 
-startFrom       latestTime;
+internalField   uniform 0;
 
-startTime       0;
-
-stopAt          endTime;
-
-endTime         500;
-
-deltaT          1;
-
-writeControl    timeStep;
-
-writeInterval   50;
-
-purgeWrite      2;
-
-writeFormat     ascii;
-
-writePrecision  6;
-
-writeCompression off;
-
-timeFormat      general;
-
-timePrecision   6;
-
-runTimeModifiable true;
-
-// adjustTimeStep  yes;
-
-// maxCo           1;
-
-functions
+boundaryField
 {
+    "(inlet|.*_in|.*_out)"
+    {
+        type            zeroGradient;
+    }
+
+    outlet
+    {
+        type            totalPressure;
+        p0              uniform 0;
+        gamma           1.4;
+        value           uniform 0;
+    }
+
+    wall
+    {
+        type            zeroGradient;
+    }
+
+    #includeEtc "caseDicts/setConstraintTypes"
 }
 
 // ************************************************************************* //

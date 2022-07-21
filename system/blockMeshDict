@@ -14,43 +14,38 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-backgroundMesh
-{
-    xMin   -50;
-    xMax   70;
-    yMin   -100;
-    yMax   250;
-    zMin     0;
-    zMax   50;
-    xCells  12;
-    yCells  35;
-    zCells  5;
-}
+
+xmin   -50;
+xmax   70;
+ymin   -100;
+ymax   250;
+zmin     0;
+zmax   50;
+xs  12;
+ys  35;
+zs  5;
+
+// xs #calc "($xmax - $xmin)*.2"; 
+// ys #calc "($ymax - $ymin)*.2"; 
+// zs #calc "($zmax - $zmin)*.2";
 
 convertToMeters 1;
 
 vertices
 (
-    ($:backgroundMesh.xMin $:backgroundMesh.yMin $:backgroundMesh.zMin)
-    ($:backgroundMesh.xMax $:backgroundMesh.yMin $:backgroundMesh.zMin)
-    ($:backgroundMesh.xMax $:backgroundMesh.yMax $:backgroundMesh.zMin)
-    ($:backgroundMesh.xMin $:backgroundMesh.yMax $:backgroundMesh.zMin)
-
-    ($:backgroundMesh.xMin $:backgroundMesh.yMin $:backgroundMesh.zMax)
-    ($:backgroundMesh.xMax $:backgroundMesh.yMin $:backgroundMesh.zMax)
-    ($:backgroundMesh.xMax $:backgroundMesh.yMax $:backgroundMesh.zMax)
-    ($:backgroundMesh.xMin $:backgroundMesh.yMax $:backgroundMesh.zMax)
+    ($xmin $ymin $zmin)
+    ($xmax $ymin $zmin)
+    ($xmax $ymax $zmin)
+    ($xmin $ymax $zmin)
+    ($xmin $ymin $zmax)
+    ($xmax $ymin $zmax)
+    ($xmax $ymax $zmax)
+    ($xmin $ymax $zmax)
 );
 
 blocks
 (
-    hex (0 1 2 3 4 5 6 7)
-    (
-        $:backgroundMesh.xCells
-        $:backgroundMesh.yCells
-        $:backgroundMesh.zCells
-    )
-    simpleGrading (1 1 1)
+    hex (0 1 2 3 4 5 6 7) ( $xs $ys $zs ) simpleGrading (1 1 1)
 );
 
 edges

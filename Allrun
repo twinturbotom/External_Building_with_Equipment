@@ -4,24 +4,23 @@ cd ${0%/*} || exit 1    # run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-mkdir 0
+#mkdir 0
 
 
-runApplication surfaceFeatureExtract
 runApplication blockMesh
-
-runApplication decomposePar #-allRegions
-mpiexec -n 4 snappyHexMesh -parallel
-
-reconstructParMesh -latestTime -mergeTol 1E-06
-
-cp 0.org/* 0/
-cp 0.org/* 3/
-
-# rm -rf processor*
-
-runApplication 
-
+runApplication surfaceFeatures
+runApplication decomposePar
+mpiexec -np 16 -oversubscribe snappyHexMesh -parallel -overwrite 
+runApplication reconstructParMesh -constant
+runApplication checkMesh -allGeometry -allTopology
+# runApplication changeDictionDict
+# runApplication setFields
+rm -rf processor*
+mv log.decomposePar log.decomposePar1
+runApplication decomposePar
+mpiexec -oversubscribe -np 16 simpleFoam -parallel
+runApplication reconstructPar -newTimes
+touch c.foam
 
 #runApplication decomposePar -fileHandler collated
 #runParallel snappyHexMesh -overwrite -fileHandler collated
